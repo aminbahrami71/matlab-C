@@ -200,16 +200,6 @@ function [Q,varargout]=ortha(A,X)
 %
 %  ortha(eye(m),X) spans the same space as orth(X)
 %
-%  Examples:
-%  [q,Aq]=ortha(hilb(20),eye(20,5))
-%  computes 5 column-vectors q spanned by the first 5 coordinate vectors,
-%  and orthonormal with respect to the scalar product given by the
-%  20x20 Hilbert matrix,
-%  while an attempt to orthogonalize (in the same scalar product)
-%  all 20 coordinate vectors using
-%  [q,Aq]=ortha(hilb(20),eye(20))
-%  gives 14 column-vectors out of 20. 
-%  Note that rank(hilb(20)) = 13 in double precision. 
 %
 %  Algorithm:
 %  X=orth(X), [U,S,V]=SVD(X'*A*X), then Q=X*U*S^(-1/2)
